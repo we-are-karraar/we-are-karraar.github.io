@@ -73,6 +73,7 @@ nav {
 }
 
 nav .nav-links {
+  flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
   display: flex;
@@ -81,6 +82,7 @@ nav .nav-links {
 nav a {
   letter-spacing: -.02em;
   color: var(--tcol);
+  cursor: pointer;
   font-size: 16px;
   font-weight: 600;
 }
@@ -176,11 +178,17 @@ span.outline {
   -webkit-text-fill-color: var(--tcol);
 }
 
+.flex-holder {
+  flex-wrap: wrap;
+  display: flex;
+}
+
 #hero .text-holder {
   grid-column: 2 / 9;
 }
 
 #hero .text-holder h1 {
+  letter-spacing: -.032em;
   margin-top: 2em;
 }
 
@@ -198,6 +206,7 @@ span.outline {
 }
 
 .flex-holder {
+  flex-wrap: wrap;
   gap: 16px;
   display: flex;
 }
@@ -212,15 +221,19 @@ span.outline {
 
 #services {
   margin-top: 10rem;
+  margin-bottom: 10em;
 }
 
 #services .flex-holder {
   grid-column: 2 / -2;
+  display: flex;
 }
 
 #services .flex-holder .service-card {
   background-color: var(--scol);
   border-radius: 1rem;
+  flex-grow: 1;
+  flex-basis: 10rem;
   gap: 1rem;
   padding: 2rem;
 }
@@ -241,12 +254,14 @@ span.outline {
 
 #partners .partner-logos {
   grid-column: 2 / -2;
+  display: flex;
 }
 
 #partners .partner-logos .partner-logo {
   border: 1px solid var(--scol);
   border-radius: 1rem;
-  flex-basis: 50%;
+  flex-grow: 1;
+  flex-basis: 10rem;
   place-content: center;
   place-self: center;
   padding: 2rem;
@@ -287,7 +302,7 @@ span.outline {
 
 #projects .project-gallery article .logo {
   max-width: 8rem;
-  border-radius: .5rem;
+  border-radius: 4px;
   padding: 1rem;
 }
 
@@ -360,6 +375,7 @@ span.outline {
 footer .flex-holder {
   background-color: var(--scol);
   color: var(--tcol);
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 4rem 2rem 2rem;
